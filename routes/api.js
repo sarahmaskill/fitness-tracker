@@ -23,7 +23,6 @@ Workout.aggregate([
     },
 ])
     .then((workout) => {
-        console.log('YOO', workout);
         res.json(workout)
     })
     .catch((e) => {
@@ -57,7 +56,6 @@ router.get(`/api/workouts/range`, (req, res) => {
     ])
         .limit(10)
         .then((workout) => {
-            console.log('YOO', workout);
             res.json(workout)
         })
         .catch((e) => {

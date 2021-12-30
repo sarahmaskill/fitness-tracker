@@ -4,15 +4,15 @@ const router = require("express").Router();
 
 //homepage
 router.get("/", (req,res) => {
-    res.sendFile(path.join(_dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 //exercises
 router.get("/exercise", (req,res) => {
-    res.sendFile(path.join(_dirname, "../public/exercise.html"));
+    res.sendFile(path.join(__dirname, "../public/exercise.html"));
 });
 //stats
 router.get("/stats", (req,res) => {
-    res.sendFile(path.join(_dirname, "../public/stats.html"));
+    res.sendFile(path.join(__dirname, "../public/stats.html"));
 });
 
-module.exports = router
+module.exports = router;

@@ -3,8 +3,9 @@ const db = require('../models/workout');
 
 mongoose.connect('mongodb://localhost/workout', {
   useNewUrlParser: true,
-  useFindAndModify: false,
   useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false 
 });
 
 const workoutSeed = [
@@ -60,7 +61,7 @@ const workoutSeed = [
   },
   {
     day: new Date(new Date().setDate(new Date().getDate() - 5)),
-    exercises: [
+    exercise: [
       {
         type: 'resistance',
         name: 'Bench Press',
@@ -86,7 +87,7 @@ const workoutSeed = [
   },
   {
     day: new Date(new Date().setDate(new Date().getDate() - 3)),
-    exercises: [
+    exercise: [
       {
         type: 'resistance',
         name: 'Quad Press',
@@ -99,7 +100,7 @@ const workoutSeed = [
   },
   {
     day: new Date(new Date().setDate(new Date().getDate() - 2)),
-    exercises: [
+    exercise: [
       {
         type: 'resistance',
         name: 'Bench Press',
@@ -112,7 +113,7 @@ const workoutSeed = [
   },
   {
     day: new Date(new Date().setDate(new Date().getDate() - 1)),
-    exercises: [
+    exercise: [
       {
         type: 'resistance',
         name: 'Military Press',
